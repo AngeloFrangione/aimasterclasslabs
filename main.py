@@ -8,6 +8,7 @@ from torchvision import transforms
 from torch.autograd import Variable
 import models
 import datasets
+import pdb
 
 # Training settings
 parser = argparse.ArgumentParser(description='PyTorch MNIST Example')
@@ -54,7 +55,7 @@ test_loader = torch.utils.data.DataLoader(
 model = models.Net()
 if args.cuda:
     model.cuda()
-
+# pdb.set_trace()
 optimizer = optim.SGD(model.parameters(), lr=args.lr, momentum=args.momentum)
 
 def train(epoch):
